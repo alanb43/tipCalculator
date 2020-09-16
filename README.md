@@ -26,9 +26,7 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user features on Imgur:
-
-https://imgur.com/a/GN3XgwT
+[Here's a walkthrough of implemented user features on Imgur](https://imgur.com/a/GN3XgwT)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
