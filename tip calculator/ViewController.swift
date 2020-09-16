@@ -21,6 +21,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onTap(_ sender: Any) {
+        
+        // This makes the number pad drop when the view controller is clicked anywhere, set to true so that any tap lowers the keypad if it's up
+        view.endEditing(true)
     }
     
     @IBAction func calculateTip(_ sender: Any) {
