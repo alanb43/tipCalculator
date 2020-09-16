@@ -22,7 +22,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZjO-3d-hWe">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZjO-3d-hWe">
                                 <rect key="frame" x="292" y="129" width="102" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -80,7 +80,14 @@
                             <outletCollection property="gestureRecognizers" destination="Gyw-i1-EBc" appends="YES" id="sBf-9B-jWv"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Tip Calculator" id="9EC-pa-wBt"/>
+                    <navigationItem key="navigationItem" title="Tip Calculator" id="9EC-pa-wBt">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="6CP-xZ-bFj" colorLabel="IBBuiltInLabel-Red">
+                            <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="eSh-UQ-Aqx" kind="push" id="GG0-IE-NDJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="billAmountTextField" destination="ZjO-3d-hWe" id="BVD-yH-U79"/>
                         <outlet property="tipAmountSegmentedControl" destination="p5Z-ih-XDE" id="Ave-Sj-2wQ"/>
@@ -96,6 +103,38 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="SwT-zM-8Km">
+            <objects>
+                <viewController id="eSh-UQ-Aqx" customClass="SettingsViewController" customModule="tip_calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bdG-8n-xR7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Configure Default Tip Percentages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XId-mh-LqD">
+                                <rect key="frame" x="20" y="125" width="276" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tip 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBQ-Cg-VSU">
+                                <rect key="frame" x="20" y="174" width="37" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="qJP-q3-9Ap"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pTk-g9-C50"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JGL-uD-Ea5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1815.9420289855075" y="139.95535714285714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Uoz-et-Lc3">
